@@ -1,9 +1,9 @@
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { fetchImg } from './fetchImages';
-import { createCardMarkup } from './createCard';
+import { createCardMarkup } from './createCardMarkup';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from 'simplelightbox';
-import { onScroll, onToTopBtn } from './topButton';
+import { onScroll, onToTopBtn } from './onTopButton';
 
 const galleryWrap = document.querySelector('.gallery');
 const form = document.querySelector('#search-form');

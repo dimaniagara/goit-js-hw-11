@@ -1,24 +1,24 @@
 export { onScroll, onToTopBtn };
 
-const toTopBtn = document.querySelector('.btn-top');
+const toTopBtn = document.querySelector('.btn-to-top');
 
 window.addEventListener('scroll', onScroll);
 toTopBtn.addEventListener('click', onToTopBtn);
 
 function onScroll() {
-  const scrolled = window.pageOffset;
+  const scrolled = window.pageYOffset;
   const coords = document.documentElement.clientHeight;
 
   if (scrolled > coords) {
-    toTopBtn.classList.add('btn-top--visible');
+    toTopBtn.classList.add('btn-to-top--visible');
   }
   if (scrolled < coords) {
-    toTopBtn.classList.remove('btn-top--visible');
+    toTopBtn.classList.remove('btn-to-top--visible');
   }
 }
 
 function onToTopBtn() {
-  if (window.pageOffset > 0) {
+  if (window.pageYOffset > 0) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
